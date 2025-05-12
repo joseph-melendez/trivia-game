@@ -1,0 +1,115 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science: Computers",
+        "question": "America Online (AOL) started out as which of these online service providers?",
+        "correct_answer": "Quantum Link",
+        "incorrect_answers": [
+          "CompuServe",
+          "Prodigy",
+          "GEnie"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "Deus Ex (2000) does not feature the World Trade Center because it was destroyed by terrorist attacks according to the game&#039;s plot.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+          "False"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Japanese Anime &amp; Manga",
+        "question": "Which of these is not a world in the anime &quot;Buddyfight&quot;?",
+        "correct_answer": "Ancient Dragon World",
+        "incorrect_answers": [
+          "Dragon World",
+          "Star Dragon World",
+          "Darkness Dragon World"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In &quot;Super Mario World&quot;, the rhino mini-boss, Reznor, is named after the lead singer of the band &quot;Nine Inch Nails&quot;.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+          "False"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "A scientific study on peanuts in bars found traces of over 100 unique specimens of urine.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+          "True"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Which of these is NOT a playable character race in the video game &quot;Starbound&quot;?",
+        "correct_answer": "Fenerox",
+        "incorrect_answers": [
+          "Floran",
+          "Novakid",
+          "Hylotl"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Music",
+        "question": "Which English guitarist has the nickname &quot;Slowhand&quot;?",
+        "correct_answer": "Eric Clapton",
+        "incorrect_answers": [
+          "Mark Knopfler",
+          "Jeff Beck",
+          "Jimmy Page"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Science: Computers",
+        "question": "The &#039;Raspberry Pi&#039; series of single-board computers were created in the United States.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+          "True"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "Big the Cat is a playable character in &quot;Sonic Generations&quot;.",
+        "correct_answer": "False",
+        "incorrect_answers": [
+          "True"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Japanese Anime &amp; Manga",
+        "question": "In &quot;Puella Magi Madoka Magica&quot;, what is the first name of Madoka&#039;s younger brother?",
+        "correct_answer": "Tatsuya",
+        "incorrect_answers": [
+          "Montoya",
+          "Tomohisa",
+          "Minato"
+        ]
+      }
+    ]
+  }
