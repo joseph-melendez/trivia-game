@@ -1,0 +1,120 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .app-size {
+    min-width: 320px;
+    background-color: lightblue;
+    margin: 15px 15px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .app-size {
+    min-width: 75%;
+    background-color: yellow;
+  }
+}
+
+.error {
+  color: red;
+}
+
+.button-ok {
+  background-color:dodgerblue;
+  color: white;
+}
+
+.button-ok:disabled {
+  cursor: auto;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-size-28 {
+  font-size: 28px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.ol-margin-left {
+  margin-left: -5px;
+}
+
+.ol-no-decoration {
+  list-style: none;
+}
+
+.answer {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.answer-disabled {
+  margin-bottom: 5px;
+  cursor: auto;
+}
+
+.answer:hover {
+  background-color: blanchedalmond;
+}
+
+.answer-selected {
+  background-color: lightgreen;
+}
+
+.background-color-green {
+  background-color: green;
+}
+
+.background-color-orange {
+  background-color: orange;
+}
+
+.background-color-red {
+  background-color: red;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.pill {
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 65px;
+  margin: 4px 2px;
+  border-radius: 16px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.margin-10 {
+  margin: 10px 10px;
+}
