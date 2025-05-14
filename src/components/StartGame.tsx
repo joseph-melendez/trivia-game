@@ -26,12 +26,20 @@ export const StartGame = () => {
     }
 
     return (
-        <div>
+        <div className='font-size-18'>
             <p>
                 Welcome to the Trivia Game!  This application will deliver you random trivia questions to answer and keep track of your score.  Please select the number of questions you wish to answer, from 1 to 20.
             </p>
             <p>
-                Number of questions: <input type='number' min={QuestionsMin} max={QuestionsMax} onChange={validateRounds} value={rounds}></input>
+                Number of questions: 
+                <input
+                    type='number'
+                    min={QuestionsMin}
+                    max={QuestionsMax}
+                    onChange={validateRounds}
+                    value={rounds}
+                    className='margin-10 number-of-questions'
+                />
             </p>
             {
                 error.length > 0 && 
@@ -39,10 +47,6 @@ export const StartGame = () => {
             }
             <p>
                 <button className='button-ok' onClick={buttonClick} disabled={error !== ''}>Start</button>
-            </p>
-            <hr />
-            <p>
-                <Link to='/about'>About Trivia Game</Link>
             </p>
         </div>
     );

@@ -60,7 +60,7 @@ export const Play = () => {
     if (questionNumber >= data.length) {
         return (
             <div className='font-size-18'>
-                <p>You answered {correctAnswers} of {data.length} correctly.</p>
+                <p>You answered {correctAnswers} of {data.length} question(s) correctly.</p>
                 <p><Link to='/'>Play Again</Link></p>
             </div>
         )
