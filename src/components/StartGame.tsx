@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { QuestionsMin, QuestionsMax } from '../types/Constants';
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
+import { Difficulty } from '../types/Difficulty';
 
 export const StartGame = () => {
     const [rounds, setRounds] = useState(10);
+    const [difficulty, setDifficulty] = useState(Difficulty.any);
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const buttonClick = async () => {
-        navigate(`/play/${rounds}`);
+        navigate(`/play/${rounds}?difficulty=${difficulty}`);
     }
 
     const validateRounds = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +30,7 @@ export const StartGame = () => {
     return (
         <div className='font-size-18'>
             <p>
-                Welcome to the Trivia Game!  This application will deliver you random trivia questions to answer and keep track of your score.  Please select the number of questions you wish to answer, from 1 to 20.
+                Welcome to the Trivia Game!  This application will deliver you random trivia questions to answer and keep track of your score.  Please select the number of questions you wish to answer, from 1 to 20, and the desired difficulty.
             </p>
             <p>
                 Number of questions: 
@@ -40,11 +42,20 @@ export const StartGame = () => {
                     value={rounds}
                     className='margin-10 number-of-questions'
                 />
+                <br />
+                Difficulty: 
+                <select
+                    value={difficulty}
+                    onChange={(e) => {setDifficulty(e.target.value as Difficulty)}}
+                    className='margin-10 difficulty-dropdown'
+                >
+                    <option value={Difficulty.any}>Any</option>
+                    <option value={Difficulty.easy}>Easy</option>
+                    <option value={Difficulty.medium}>Medium</option>
+                    <option value={Difficulty.hard}>Hard</option>
+                </select>
             </p>
-            {
-                error.length > 0 && 
-                    <p className='error'>{error}</p>
-            }
+            <p className='error'>{error}</p>
             <p>
                 <button className='button-ok' onClick={buttonClick} disabled={error !== ''}>Start</button>
             </p>

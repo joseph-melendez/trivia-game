@@ -32,19 +32,3 @@ function App() {
 }
 
 export default App
-
-/*
-    <>
-        
-    </>
-
-      <Routes>
-
-      </Routes>
-      <Route path='/about'>
-            <ProgrammingGoals />
-          </Route>
-          <Route path='/'>
-            <StartGame />
-        </Route>
-*/

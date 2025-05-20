@@ -1,20 +1,23 @@
 import { TriviaApi } from '../types/Constants';
 import { Question } from '../types/Question';
-import rawData from '../data/GetQuestionsResponse.json';
 import { QuestionTypes } from '../types/QuestionTypes';
+import { Difficulty } from '../types/Difficulty';
+import { RawQuestion } from '../types/RawQuestion';
 
-export const GetQuestions = async (numberOfQuestions: number): Promise<Question[]> => {
-    const response = await fetch(`${TriviaApi}?amount=${numberOfQuestions}`);
+export const GetQuestions = async (numberOfQuestions: number, difficulty: Difficulty): Promise<Question[]> => {
+    const baseUrl = `${TriviaApi}?amount=${numberOfQuestions}`;
+    const urlToFetch = baseUrl + ((difficulty != null && difficulty != Difficulty.any) ? `&difficulty=${difficulty}` : '');
+
+    const response = await fetch(urlToFetch);
     const json = await response.json();
-    // const json = rawData;
 
     const questions: Question[] = [];
 
-    json.results.map((item: any, index: number) => {
+    json.results.map((item: RawQuestion, index: number) => {
         const question: Question = {
             number: index + 1,
             category: item.category,
-            difficulty: item.difficulty,
+            difficulty: item.difficulty as Difficulty,
             type: item.type,
             question: item.question,
             answer: item.correct_answer,
