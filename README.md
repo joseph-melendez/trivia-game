@@ -1,54 +1,20 @@
-# React + TypeScript + Vite
+# Trivia Game
+This app, simply named `Trivia Game`, is a basic frontend to the [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php) API that returns trivia questions to the user.  This application was written in `React` using `Vite` and `Typescript` using `Yarn` and was meant as nothing more than a simple exercise.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Running Trivia Game
+In order to run  Trivia Game (note this was crated with Node Version `v22.14.0`):
 
-Currently, two official plugins are available:
+1. Clone the repository to your computer: `git clone https://github.com/joseph-melendez/trivia-game.git`
+2. Change directories to: `trivia-game`
+3. Install the necessary node module with one of the following commands: `yarn` or `npm install`
+4. Run the game with one of the following commands: `yarn dev` or `npm run dev`
+5. Go to your browser and open the following url: [http://localhost:5173](http://localhost:5173)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Playing Trivia Game
+Playing Trivia Game is very easy:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. From the home page, select the number of questions you would like to answer, from 1 to 20, and the difficulty of the questions (Any, Easy, Medium, or Hard), and click `Start`.
+2. Answer by clicking on any of the answers, then selecting the `Answer` button.
+3. You will then be informed if you answered the question correctly, or, if incorrect, you will be informed of the correct answer.
+4. Click `Next Question` to go to the next question or, if that was the final question, to the final screen that will inform you of how many questions you got correct.
+5. Click `Play Again` to return to the home page.
