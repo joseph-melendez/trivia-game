@@ -92,6 +92,7 @@
 
 .answer-disabled {
   margin-bottom: 5px;
+  width: 95%;
   cursor: auto;
 }
 
