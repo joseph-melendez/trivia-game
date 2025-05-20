@@ -6,21 +6,21 @@ import { QuestionXOfX } from './QuestionXOfX';
 import { CategoryDifficulty } from './CategoryDifficulty';
 import { Question } from './Question';
 import { useParams, Link } from 'react-router';
+import { GetDifficultyFromQueryString } from '../types/Difficulty';
 
 export const Play = () => {
     const { rounds } = useParams();
+    const difficulty = GetDifficultyFromQueryString(window.location.search);
     const [timestamp] = useState(Date.now().toString());
     const [answer, setAnswer] = useState(-1);
     const [questionNumber, setQuestionNumber] = useState(0);
     const [questionAnswered, setQuestionAnswered] = useState(false);
     const [correctAnswers, setCorrectAnswers] = useState(0);
-    const { status, data, isFetching, error } = useQuestions(Number(rounds), timestamp);
+    const { data, isFetching, error } = useQuestions(Number(rounds), difficulty, timestamp);
 
     if (isFetching) {
-        console.log(`status === ${status}`);
-        return <></>;
+        return <>Retrieving Data...</>;
     } else if (error || data === undefined) {
-        console.log(`error!!!!! ${error}`);
         return <>There was an error</>;
     }
 

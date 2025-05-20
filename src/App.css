@@ -141,3 +141,7 @@
 .number-of-questions {
   height: 20px;
 }
+
+.difficulty-dropdown {
+  height: 30px;
+}
