@@ -3,6 +3,7 @@ import { ProgrammingGoals } from './components/ProgrammingGoals';
 import { StartGame } from './components/StartGame';
 import { Routes, Route } from 'react-router';
 import { Play } from './components/Play';
+import { GetFullPath } from './utils/GetFullPath';
 import './App.css'
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
       <div className='app-size'>
         <h1>Trivia Game</h1>
         <Routes>
-          <Route path='/about' element={<ProgrammingGoals />} />
-          <Route path='/play/:rounds' element={<Play />} />
-          <Route path='/' element={<StartGame />} />
+          <Route path={GetFullPath('/about')} element={<ProgrammingGoals />} />
+          <Route path={GetFullPath('/play/:rounds')} element={<Play />} />
+          <Route path={GetFullPath('/')} element={<StartGame />} />
         </Routes>
       </div>
     </QueryClientProvider>
