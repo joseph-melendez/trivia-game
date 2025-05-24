@@ -2,7 +2,7 @@
 This app, simply named `Trivia Game`, is a basic frontend to the [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php) API that returns trivia questions to the user.  This application was written in `React` using `Vite` and `Typescript` using `Yarn` and was meant as nothing more than a simple exercise.
 
 ## Running Trivia Game
-In order to run  Trivia Game (note this was crated with Node Version `v22.14.0`):
+In order to run  Trivia Game (note this was created with Node Version `v22.14.0`):
 
 1. Clone the repository to your computer: `git clone https://github.com/joseph-melendez/trivia-game.git`
 2. Change directories to: `trivia-game`
