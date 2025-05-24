@@ -20,3 +20,6 @@ Playing Trivia Game is very easy:
 3. You will then be informed if you answered the question correctly, or, if incorrect, you will be informed of the correct answer.
 4. Click `Next Question` to go to the next question or, if that was the final question, to the final screen that will inform you of how many questions you got correct.
 5. Click `Play Again` to return to the home page.
+
+## Deploying Trivia Game
+At the present time, there is no build pipeline setup.  In order to deploy the Trivia Game to GitHub Pages, please run the following command: `npm run deploy`
