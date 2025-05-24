@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { GetFullPath } from '../utils/GetFullPath';
 
 export function ProgrammingGoals() {
   return (
@@ -42,7 +43,7 @@ export function ProgrammingGoals() {
         </ol>
         </div>
         <p>
-            <Link to='/'>Return to Game Start</Link>
+            <Link to={GetFullPath('/')}>Return to Game Start</Link>
         </p>
     </>
   )

@@ -7,6 +7,7 @@ import { CategoryDifficulty } from './CategoryDifficulty';
 import { Question } from './Question';
 import { useParams, Link } from 'react-router';
 import { GetDifficultyFromQueryString } from '../types/Difficulty';
+import { GetFullPath } from '../utils/GetFullPath';
 
 export const Play = () => {
     const { rounds } = useParams();
@@ -61,7 +62,7 @@ export const Play = () => {
         return (
             <div className='font-size-18'>
                 <p>You answered {correctAnswers} of {data.length} question(s) correctly.</p>
-                <p><Link to='/'>Play Again</Link></p>
+                <p><Link to={GetFullPath('/')}>Play Again</Link></p>
             </div>
         )
     }

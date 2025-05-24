@@ -1,13 +1,13 @@
 {
-  "homepage": "https://joseph-melendez.github.io/trivia-app",
-  "name": "trivia-app",
+  "homepage": "https://joseph-melendez.github.io/trivia-game",
+  "name": "trivia-game",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

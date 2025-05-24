@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { QuestionsMin, QuestionsMax } from '../types/Constants';
 import { useNavigate } from 'react-router';
 import { Difficulty } from '../types/Difficulty';
+import { GetFullPath } from '../utils/GetFullPath';
 
 export const StartGame = () => {
     const [rounds, setRounds] = useState(10);
@@ -10,7 +11,7 @@ export const StartGame = () => {
     const navigate = useNavigate();
 
     const buttonClick = async () => {
-        navigate(`/play/${rounds}?difficulty=${difficulty}`);
+        navigate(GetFullPath(`/play/${rounds}?difficulty=${difficulty}`));
     }
 
     const validateRounds = (e: React.ChangeEvent<HTMLInputElement>) => {
