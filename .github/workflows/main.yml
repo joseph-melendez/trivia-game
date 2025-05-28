@@ -1,0 +1,19 @@
+name: CI/CD for Trivia Game
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install node packages
+        run: yarn
+
+      - name: Build and Deploy
+        run: npm run deploy
