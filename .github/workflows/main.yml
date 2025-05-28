@@ -15,7 +15,7 @@ jobs:
       - name: Setup environment
         run: |
           git config --global user.email "joemelendez89@gmail.com"
-          git config --global user.name "Joseph Melendez"
+          git config --global user.name "joseph-melendez"
 
       - name: Install node packages
         run: yarn
