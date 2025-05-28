@@ -3,11 +3,12 @@ import { Answer } from './Answer';
 interface AnswersProps {
     answers: string[],
     answer: number,
-    disabled: boolean,
+    wasAnswered: boolean,
+    correctAnswer: string,
     setAnswer: (index: number) => void
 }
 
-export const Answers = ({answers, answer, disabled, setAnswer} : AnswersProps) => {
+export const Answers = ({answers, answer, wasAnswered, correctAnswer, setAnswer} : AnswersProps) => {
     return (
         <div className='answer-table align-left'>
             <ol className='ol-no-decoration ol-margin-left'>
@@ -19,7 +20,8 @@ export const Answers = ({answers, answer, disabled, setAnswer} : AnswersProps) =
                             answer={answer}
                             setAnswer={setAnswer}
                             key={prompt}
-                            disabled={disabled}
+                            wasAnswered={wasAnswered}
+                            correctAnswer={correctAnswer}
                         />
                     )
                 }

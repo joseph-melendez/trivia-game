@@ -41,14 +41,19 @@ export const Play = () => {
         }
     }
 
+    const isCorrectAnswer = (): boolean => {
+        return (data[questionNumber].options[answer] === data[questionNumber].answer);
+    }
+
     const answerText = () => {
-        if (data[questionNumber].options[answer] === data[questionNumber].answer) {
+        if (isCorrectAnswer()) {
             return <b>You are correct!<br /><br /></b>
         } else {
             return (
                 <p>
                     That is incorrect.<br />
-                    The correct answer is: <b>{data[questionNumber].answer}</b>
+                    The correct answer is:&nbsp;
+                    <b dangerouslySetInnerHTML={{__html: data[questionNumber].answer}} />
                 </p>
             )
         }
@@ -74,7 +79,13 @@ export const Play = () => {
             <CategoryDifficulty category={item.category} difficulty={item.difficulty} />
             <br />
             <Question question={item.question} />
-            <Answers answers={item.options} answer={answer} setAnswer={setAnswer} disabled={questionAnswered} />
+            <Answers
+                answers={item.options}
+                answer={answer}
+                setAnswer={setAnswer}
+                wasAnswered={questionAnswered}
+                correctAnswer={data[questionNumber].answer}
+            />
             {!questionAnswered && <><br /><br /></>}
             {questionAnswered && answerText()}
             <p>

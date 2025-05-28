@@ -10,10 +10,10 @@ interface CategoryDifficultyProps {
 export const CategoryDifficulty = ({category, difficulty}: CategoryDifficultyProps) => {
     return (
         <div className='flex-container'>
-            <div className='category-difficulty font-size-24'>
-                <b className='align-left' dangerouslySetInnerHTML={{__html: `${category}`}} />
+            <div className='category-difficulty-name font-size-24'>
+                <b dangerouslySetInnerHTML={{__html: `${category}`}} />
             </div>
-            <div className='category-difficulty'>
+            <div className='category-difficulty-pill'>
                 <Difficulty difficulty={difficulty} />
             </div>
         </div>

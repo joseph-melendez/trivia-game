@@ -1,21 +1,23 @@
 interface AnswerProps {
     prompt: string,
     index: number,
-    disabled: boolean,
     answer: number,
+    wasAnswered: boolean,
+    correctAnswer: string,
     setAnswer: (index: number) => void
 }
 
-export const Answer = ({prompt, index, disabled, answer, setAnswer} : AnswerProps) => {
+export const Answer = ({prompt, index, answer, wasAnswered, correctAnswer, setAnswer} : AnswerProps) => {
     const answerFormatting = (index: number): string => {
-        const start = (disabled) ? 'answer-disabled ' : 'answer ';
+        const start = (wasAnswered) ? 'answer-disabled ' : 'answer ';
         const selected = (index === answer) ? 'answer-selected' : '';
+        const wrongAnswer = (wasAnswered && index !== answer && prompt === correctAnswer) ? 'answer-wrong' : '';
 
-        return start + selected;
+        return start + selected + wrongAnswer;
     }
 
     const answerClicked = (index: number) => {
-        if (!disabled) {
+        if (!wasAnswered) {
             setAnswer(index);
         }
     }

@@ -31,7 +31,12 @@
     flex-wrap: wrap;
   }
 
-  .category-difficulty {
+  .category-difficulty-name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .category-difficulty-pill {
     width: 100%;
     text-align: center;
   }
@@ -40,6 +45,16 @@
 @media screen and (min-width: 769px) {
   .app-size {
     width: 750px;
+  }
+
+  .category-difficulty-name {
+    width: 100%;
+    text-align: left;
+  }
+
+  .category-difficulty-pill {
+    width: 100%;
+    text-align: right;
   }
 }
 
@@ -94,6 +109,13 @@
   margin-bottom: 5px;
   width: 95%;
   cursor: auto;
+}
+
+.answer-wrong {
+  margin-bottom: 5px;
+  width: 95%;
+  cursor: auto;
+  background-color: #ff2400;
 }
 
 .answer:hover {
