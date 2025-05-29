@@ -13,6 +13,7 @@ jobs:
         run: |
           echo $env.EMAIL
           echo "${{ env.EMAIL }}"
+          echo "${{ env.USERNAME }}"
           git config --global user.email "${{ env.EMAIL }}"
           git config --global user.name "${{ env.USERNAME }}"
 
