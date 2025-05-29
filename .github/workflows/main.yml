@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Setup environment
         run: |
-          echo $env.EMAIL
-          echo "${{ vars.EMAIL }}"
-          echo "${{ vars.USERNAME }}"
           git config --global user.email "${{ vars.EMAIL }}"
           git config --global user.name "${{ vars.USERNAME }}"
 
