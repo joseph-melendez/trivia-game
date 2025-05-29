@@ -31,7 +31,7 @@ export const StartGame = () => {
     return (
         <div className='font-size-18'>
             <p>
-                Welcome to the Trivia Game!  This application will deliver you random trivia questions to answer and keep track of your score.  Please select the number of questions you wish to answer, from 1 to 20, and the desired difficulty.
+                Welcome to Trivia Game!  This application will deliver you random trivia questions to answer and keep track of your score.  Please select the number of questions you wish to answer, from 1 to 20, and the desired difficulty.
             </p>
             <p>
                 Number of questions: 
