@@ -12,10 +12,10 @@ jobs:
       - name: Setup environment
         run: |
           echo $env.EMAIL
-          echo "${{ secrets.EMAIL }}"
-          echo "${{ secrets.USERNAME }}"
-          git config --global user.email "${{ env.EMAIL }}"
-          git config --global user.name "${{ env.USERNAME }}"
+          echo "${{ vars.EMAIL }}"
+          echo "${{ vars.USERNAME }}"
+          git config --global user.email "${{ vars.EMAIL }}"
+          git config --global user.name "${{ vars.USERNAME }}"
 
       - name: Checkout code
         uses: actions/checkout@v2
